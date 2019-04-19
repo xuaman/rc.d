@@ -2,26 +2,6 @@
 if [ `uname` = "Darwin" ]; then
     alias ls='ls -G'
 fi
-
-# Set PS1
-if [ `id -u` == 0 ]; then
-    PS1="\[$(tput bold)\]\[$(tput setaf 1)\]\u\[$(tput sgr0)\]\[$(tput setaf 4)\]@\[$(tput sgr0)\]\[$(tput setaf 5)\]\h \[$(tput sgr0)\]\w\[$(tput bold)\]\[$(tput setaf 1)\] \\$ \[$(tput sgr0)\]"
-else
-    PS1="\[$(tput bold)\]\[$(tput setaf 3)\]\u\[$(tput sgr0)\]\[$(tput setaf 4)\]@\[$(tput sgr0)\]\[$(tput setaf 5)\]\h \[$(tput sgr0)\]\w\[$(tput bold)\]\[$(tput setaf 4)\] \\$ \[$(tput sgr0)\]"
-fi
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 export HISTTIMEFORMAT="[%y-%m-%d_%T]  "
 alias grep='grep -I --color=auto --exclude-dir={.git,.hg,.svn,.venv}'
 export GREP_COLOR='1;31'
@@ -38,9 +18,6 @@ if which brew > /dev/null; then
     export PKG_CONFIG_PATH="$BREWHOME/lib/pkgconfig"
 fi
 
-# Golang env
-export GOPATH="$HOME/src/Golang"
-export PATH="$GOPATH/bin:$PATH"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
