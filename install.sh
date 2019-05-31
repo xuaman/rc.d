@@ -7,7 +7,7 @@ BREW_URL='https://raw.githubusercontent.com/Homebrew/install/master/install'
 OH_MY_ZSH_URL='https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh'
 POWERLINE_FONTS_URL='https://github.com/powerline/fonts.git'
 PYENV_URL='https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer'
-RC_URL='git@github.com:seamile/rc.d.git'
+RC_URL='git@github.com:xuaman/rc.d.git'
 
 # check cmd exist
 exist() {
